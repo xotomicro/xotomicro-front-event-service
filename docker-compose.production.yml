@@ -1,11 +1,13 @@
 version: "3"
 services:
   xotomicro-front-event-service:
+    env_file:
+      - token.env
     build:
       context: ./
       dockerfile: docker/dockerfile.production
-    environment:
-      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    #   environment:
+    #     - GITHUB_TOKEN=${GITHUB_TOKEN}
     container_name: xotomicro-front-event-service
     ports:
       - 7071:80
