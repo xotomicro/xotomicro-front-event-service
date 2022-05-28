@@ -1,7 +1,7 @@
 const {merge} = require("webpack-merge")
 const path = require("path")
 require("dotenv").config({path: "node_modules/@xotomicro/xotomicro-front-utility-registry/src/global.env"})
-require("dotenv").config()
+require("dotenv").config({ path: "service.env" })
 const commonConfig = require("./webpack.common")
 const {getMicrofrontOutputConfig} = require("@xotomicro/xotomicro-front-utility-registry/src/config/webpack.shared")
 
