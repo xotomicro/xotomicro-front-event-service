@@ -1,0 +1,13 @@
+version: "3"
+services:
+  xotomicro-front-event-service:
+    build:
+      context: ./
+      dockerfile: docker/dockerfile.development
+      args:
+        - GITHUB_TOKEN=${GITHUB_TOKEN}
+    container_name: xotomicro-front-event-service
+    ports:
+      - 7071:7071
+    volumes:
+      - ./:/app
